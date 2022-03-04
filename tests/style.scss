@@ -31,4 +31,8 @@ body {
   @include media.hover {
     background: gray;
   }
+
+  @include media.touch {
+    font-size: 17px;
+  }
 }

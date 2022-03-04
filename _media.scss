@@ -58,3 +58,14 @@
     @content;
   }
 }
+
+/// Media query for touch input.
+///
+/// @since 1.0.1
+///
+/// @output CSS media query
+@mixin touch {
+  @media (pointer: coarse) {
+    @content;
+  }
+}
