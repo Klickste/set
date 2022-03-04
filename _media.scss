@@ -1,0 +1,60 @@
+////
+/// @group media
+/// @author cgoern
+////
+
+// ==========================================================================
+// Modules
+// ==========================================================================
+
+@use './support';
+
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+/// Media query for Display P3 capable device and supported browser.
+///
+/// @since 1.0.0
+///
+/// @output CSS media query
+@mixin displayP3() {
+  @media (color-gamut: p3) {
+    @include support.displayP3() {
+      @content;
+    }
+  }
+}
+
+/// Media query for dark system appearance.
+///
+/// @since 1.0.0
+///
+/// @output CSS media query
+@mixin darkMode() {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+/// Media query for viewport dimensions.
+///
+/// @since 1.0.0
+///
+/// @output CSS media query
+@mixin viewport($breakpoint, $direction: 'min', $dimension: 'width') {
+  @media (#{$direction}-#{$dimension}: #{$breakpoint}) {
+    @content;
+  }
+}
+
+/// Media query for hover state.
+///
+/// @since 1.0.0
+///
+/// @output CSS media query
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}

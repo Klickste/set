@@ -1,0 +1,19 @@
+////
+/// @group support
+/// @author cgoern
+////
+
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+/// Feature query for Display P3 supported browser.
+///
+/// @since 1.0.0
+///
+/// @output CSS feature query
+@mixin displayP3() {
+  @supports (color: color(display-p3 1 1 1)) {
+    @content;
+  }
+}

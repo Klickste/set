@@ -1,0 +1,34 @@
+////
+/// @group style
+/// @author cgoern
+////
+
+@use 'index' as utils;
+@use 'media';
+@use 'support';
+
+body {
+  --color: cyan;
+
+  color: red;
+
+  @include media.darkMode {
+    color: blue;
+  }
+
+  @include media.displayP3 {
+    color: yellow;
+  }
+
+  @include media.viewport(720px) {
+    background: green;
+  }
+
+  @include support.displayP3 {
+    --color: orange;
+  }
+
+  @include media.hover {
+    background: gray;
+  }
+}
