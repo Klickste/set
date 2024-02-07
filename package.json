@@ -24,10 +24,8 @@
     "semi": false,
     "singleQuote": true
   },
-  "dependencies": {
-    "sass": "^1.49.9"
-  },
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^3.2.5",
+    "sass": "^1.70.0"
   }
 }
